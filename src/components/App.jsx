@@ -15,7 +15,13 @@ function createNotes(noteItem) {
 function App() {
 return <div>
 <Header />
-{notes.map(createNotes)}
+{notes.map(noteItem =>
+    <Note 
+        key={noteItem.key}
+        title={noteItem.title}
+        content={noteItem.content}
+    />
+)}
 <Footer />
 </div>
 }
